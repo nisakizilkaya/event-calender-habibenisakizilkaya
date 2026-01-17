@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    Yerel Etkinlikler
+    <br>
+    <small style="font-size: 13px; opacity:0.9;">
+        Gelecek etkinlikleri keşfet, favorilerine ekle ve kendi etkinliklerini paylaş!
+    </small>
+</div>
+    <button onclick="getLocationEvents()" class="location-btn">
+       📍 Konumuma Göre Etkinlikler
+    </button>
+    <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Etkinlik ara...">
+
+    <input type="text" id="locationInput" placeholder="Konum gir (örn: Adana)">
+
+    <select id="categorySelect">
+        <option value="">Tüm Kategoriler</option>
+        <option value="Müzik">Müzik</option>
+        <option value="Spor">Spor</option>
+        <option value="Teknoloji">Teknoloji</option>
+        <option value="Sanat">Sanat</option>
+    </select>
+
+    <button onclick="applyFilters()">Ara</button>
+    <div id="eventsContainer" class="home-grid"></div>
+
+
+</div>
+
+
+<div id="eventList"></div>
+
+
+<div class="bottom-nav">
+    <span onclick="location.href='index.html'">🏠</span>
+    <span onclick="location.href='add-event.html'">➕</span>
+    <span onclick="location.href='profile.html'">👤</span>
+    <a href="favorites.html">❤️</a>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
